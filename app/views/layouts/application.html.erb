@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>MyBlag</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+  <head>
+    <title>Geoff Miller Software Engineer</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body ng-app= 'blog'>
+    <navbar project-name='Geoff Miller Software Engineer' >
+      <nav-link href='/'> Home </nav-link>
+      <nav-link href='/projects'> Projects </nav-link>
+    </navbar>
 
-<%= yield %>
+    <section id='main' ng-view >
+    </section>
 
-</body>
+    <footer>
+    </footer>
+  </body>
 </html>
