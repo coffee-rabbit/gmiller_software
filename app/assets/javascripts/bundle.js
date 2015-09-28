@@ -54,7 +54,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "38204ad9465c5a4122af"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "2893555ee7c304e10f03"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
 /******/ 	
@@ -561,9 +561,8 @@
 	var router = __webpack_require__(4);
 	__webpack_require__(6);
 	__webpack_require__(7);
-	__webpack_require__(8);
 
-	var app = angular.module('blog', ['ngRoute', 'app.nav', 'home', 'posts']);
+	var app = angular.module('gmlrApp', ['ngRoute', 'navModule', 'homeModule']);
 
 	// Configureation
 	app.config(function ($routeProvider) {
@@ -30425,9 +30424,9 @@
 	'use strict';
 
 	var angular = __webpack_require__(2);
-	var posts = angular.module('posts', []);
+	var home = angular.module('homeModule', []);
 
-	module.exports = posts;
+	module.exports = home;
 
 /***/ },
 /* 7 */
@@ -30436,9 +30435,8 @@
 	'use strict';
 
 	var angular = __webpack_require__(2);
-	var home = angular.module('home', []);
-
-	module.exports = home;
+	__webpack_require__(8);
+	module.exports = angular.module('navModule', ['navDirectives']);
 
 /***/ },
 /* 8 */
@@ -30447,23 +30445,13 @@
 	'use strict';
 
 	var angular = __webpack_require__(2);
-	__webpack_require__(9);
-	module.exports = angular.module('app.nav', ['navDirectives']);
-
-/***/ },
-/* 9 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var angular = __webpack_require__(2);
-	var navbar = __webpack_require__(10);
-	var nav_link = __webpack_require__(11);
+	var navbar = __webpack_require__(9);
+	var nav_link = __webpack_require__(10);
 
 	module.exports = angular.module('navDirectives', []).directive('navbar', navbar).directive('navLink', nav_link);
 
 /***/ },
-/* 10 */
+/* 9 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -30501,7 +30489,7 @@
 	module.exports = navbar;
 
 /***/ },
-/* 11 */
+/* 10 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';

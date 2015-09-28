@@ -13,8 +13,43 @@
  */
  @import "bootstrap-sprockets";
  @import "bootstrap";
- @import "cover";
+
  //this is for bootstraps navbar which is fixed and 50px high
- body {
-  padding-top: 70px;
+
+html,body {
+height:100%;
+}
+
+body {
+  padding-top: 50;
+  height: 100%
+}
+
+#main {
+  height:100%;
+  width: 100%;
+  margin-bottom:0;
+}
+
+.splash {
+  background-image:url('snowy_night.JPG');
+  background-size: cover;
+  height:100%;
+  width: 100%;
+  margin-bottom:0;
+}
+
+#site-name {
+  color: grey;
+  text-align: center;
+  vertical-align: text-top;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.site-header {
+  text-align: center;
 }

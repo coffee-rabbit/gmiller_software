@@ -6,13 +6,13 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
     <%= csrf_meta_tags %>
   </head>
-  <body ng-app= 'blog'>
+  <body ng-app= 'gmlrApp'>
     <navbar project-name='Geoff Miller Software Engineer' >
       <nav-link href='/'> Home </nav-link>
       <nav-link href='/projects'> Projects </nav-link>
     </navbar>
 
-    <section id='main' ng-view >
+    <section id='main' class='special' ng-view >
     </section>
 
     <footer>

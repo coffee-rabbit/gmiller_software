@@ -1,10 +1,9 @@
 var angular = require('angular');
 var router = require('angular-route');
-require('./posts');
 require('./home');
 require('./nav');
 
-var app = angular.module('blog',['ngRoute','app.nav','home','posts']);
+var app = angular.module('gmlrApp',['ngRoute','navModule','homeModule']);
 
 // Configureation
 app.config(function($routeProvider){
